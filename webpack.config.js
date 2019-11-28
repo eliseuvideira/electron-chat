@@ -21,6 +21,15 @@ module.exports = {
             },
           },
         ],
+        resolve: { extensions: ['.js', '.jsx', '.json'] },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(eot|sgv|ttf|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        use: [{ loader: 'file-loader', options: { publicPath: './build/' } }],
       },
     ],
   },

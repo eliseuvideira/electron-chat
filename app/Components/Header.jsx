@@ -1,16 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Header = ({ title }) => {
+const Header = () => {
   return (
-    <header>
-      <h3>{title}</h3>
+    <header className="toolbar toolbar-header">
+      <div className="toolbar-actions">
+        <button className="btn btn-default pull-right">
+          <span className="icon icon-cancel" />
+        </button>
+      </div>
     </header>
   );
-};
-
-Header.propTypes = {
-  title: PropTypes.string,
 };
 
 export default Header;

@@ -2,10 +2,15 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 require('electron-debug')();
+const {
+  default: installExtension,
+  REACT_DEVELOPER_TOOLS,
+} = require('electron-devtools-installer');
 
 let mainWindow = null;
 
-const createWindow = () => {
+const createWindow = async () => {
+  await installExtension(REACT_DEVELOPER_TOOLS);
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 600,

@@ -1,16 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './Containers/App';
+import 'photonkit/dist/css/photon.css';
 
-import Header from './Components/Header.jsx';
-import Copycat from './Components/Copycat.jsx';
-
-ReactDOM.render(
-  <div>
-    <Header />
-    <Copycat>
-      <li>Child node</li>
-      <li>Child node</li>
-    </Copycat>
-  </div>,
-  document.querySelector('app'),
-);
+ReactDOM.render(<App />, document.querySelector('app'));
