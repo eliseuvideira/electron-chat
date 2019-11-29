@@ -15,6 +15,7 @@ const createWindow = async () => {
     width: 1000,
     height: 600,
     webPreferences: { nodeIntegration: true },
+    frame: false,
   });
   mainWindow.loadURL(
     url.format({
