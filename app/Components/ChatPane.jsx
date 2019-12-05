@@ -2,11 +2,11 @@ import React from 'react';
 import Participants from './Participants';
 import Conversation from './Conversation';
 
-function ChatPane() {
+function ChatPane({ users, messages, onSubmit }) {
   return (
     <div className="pane-group">
-      <Participants />
-      <Conversation />
+      <Participants users={users} />
+      <Conversation messages={messages} onSubmit={onSubmit} />
     </div>
   );
 }

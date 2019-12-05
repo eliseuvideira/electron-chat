@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
+    "start:dev": "concurrently -n w,e -i \"yarn dev\" \"yarn start\"",
     "dev": "webpack -d --watch",
     "build": "webpack -p"
   },
@@ -16,6 +17,7 @@
     "@babel/preset-es2017": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
     "devtron": "^1.4.0",
     "electron": "^7.1.2",
@@ -27,9 +29,11 @@
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "moment": "^2.24.0",
     "photonkit": "^0.1.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "socket.io-client": "^2.3.0"
   }
 }
